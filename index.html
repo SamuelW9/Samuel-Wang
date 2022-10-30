@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Samuel Wang</title>
+<style>
+	body{
+    	margin: 0px;
+        background-color: rgb(182, 234, 255);
+    }
+	#header-all{
+    	background-color: rgb(0, 154, 255);
+    }
+    .header-all-buttons{
+        font-family: monospace, serif, sans-serif;
+        background-color: rgb(0, 124, 195);
+        transition: 0.5s;
+        color: rgb(255, 255, 255);
+    }
+    .header-all-buttons:hover{
+    	background-color: rgb(100, 204, 195);
+    }
+    .header-all-buttons:active{
+    	background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+    }
+</style>
+</head>
+<body>
+
+    <div id="header-all" class="full fiftyw">
+        <div id="header-all-menu">
+          <button id="home" class = "header-all-buttons hundredw fiftyh ">Home</button>
+          <button id="about" class = "header-all-buttons hundredw fiftyh">About</button>
+          <button id="projects" class = "header-all-buttons hundredw fiftyh">Projects</button>
+          <button id="life" class = "header-all-buttons hundredw fiftyh">Life</button>
+        </div>
+    </div>
+
+    <script>
+    // Resizes
+
+        //Menu things
+        var headerall=document.getElementById("header-all");
+        headerall.style.padding=window.innerHeight/40+"px";
+        
+        var resizebuttons=function(){
+          var menubuttons=document.getElementsByClassName("header-all-buttons");
+          for (var i=0; i<=menubuttons.length;i++){
+              if (menubuttons[i].classList.contains("hundredw")===true){
+                  menubuttons[i].style.width=window.innerWidth*2/9+"px";
+              }
+              if (menubuttons[i].classList.contains("fiftyh")===true){
+                  menubuttons[i].style.height=window.innerHeight*1/9+"px";
+              }
+              menubuttons[i].style.fontSize=window.innerHeight*1/30+"px";
+          }
+        };
+        resizebuttons();
+        
+        
+        //general
+        var resizefull=function(){
+          var fulls=document.getElementsByClassName("full");
+          for (var i=0; i<=fulls.length;i++){
+              fulls[i].style.width=window.innerWidth+"px";
+          }
+        };
+   	</script>
+</body>
+</html>
